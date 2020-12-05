@@ -21,8 +21,17 @@
       </div>
       </div>
       {{else}}
+      {{#if hotel}}
+      <div class="mainContainer container-fluid">
+      {{>hotel-header}}
+      <div class="row">
+      {{>hotel-sidebar}}
+      {{{body}}}
+      {{else}}
       {{{body}}}
       {{/if}}
+      {{/if}}
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var db=require('./config/connection')
 var session=require('express-session')
+var hotelRouter = require('./routes/hotel')
 var userRouter = require('./routes/user');
 var adminRouter = require('./routes/admin');
 
@@ -29,7 +30,7 @@ db.connect((err)=>{
 });
 app.use('/', userRouter);
 app.use('/admin', adminRouter);
-
+app.use('/hotel',hotelRouter)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

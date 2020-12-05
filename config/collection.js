@@ -1,4 +1,4 @@
 module.exports={
     USER_COLLECTION:'admin',
-    HOTEL_COLLECTION:'hotel'
+    HOTEL_COLLECTION:'hotels'
 }
